@@ -1,9 +1,22 @@
+/**
+ * I think we should wrap both the next.js frontend AND this backend server
+ * into a Docker container, so we could just execute one command and the
+ * project will start up and work. Having them separate is more complicated
+ * for people who are newer to software who want to contribute on the project
+ */
 const express = require('express')
 const app = express();
 
-app.listen(3000);
+// I changed this to 3001 so it doesn't conflict with the next.js server
+// that is being run locally.
+app.listen(3001);
 
-
+// I like this idea
+// Instead of just pulling the manufacturers for a specific device,
+// Lets pull in all of the manufacturers and makes for a specific device
+// It is a small enough amount of data that pulling it all in and having
+// it inside our frontend, then filtering would be more efficient than making
+// two network requests. Let me know what you think?
 function getManufacturersForDevice(deviceId) {
     const filteredModels = models.filter(model => model.deviceId === deviceId);
     const manufacturerIds = [...new Set(filteredModels.map(model => model.manufacturerId))];
@@ -11,9 +24,14 @@ function getManufacturersForDevice(deviceId) {
     const filteredManufacturers = manufacturers.filter(manufacturer => 
         manufacturerIds.includes(manufacturer.manufacturerId)
     );
+
     return filteredManufacturers;
 }
 
+// We should be able to cut this function out entirely.
+// When a user selects a device, we'll send both the manufactuers
+// and the models. And we'll filter the models on the frontend to 
+// prevent us from having to make two network requests.
 function getModelsByMake(makeId) {
     const filteredModels = models.filter(model => model.manufacturerId === makeId);
     return filteredModels;
@@ -28,12 +46,58 @@ app.get('/getMakes/:deviceId', (req, res) => {
     res.json(getManufacturersForDevice(req.params.deviceId));
 });
 
+// This should be cut. Let me know what you think.
 app.get('/getModels/:makeId', (req, res) => {
     res.json(getModelsByMake(req.params.makeId));
 });
 
-
-
+/**
+ * This data below is dummy data. WE NEED TO MOVE AWAY FROM DUMMY DATA
+ * AND BEGIN USING REAL DATA ASAP!
+ * 
+ * We want to find any api that allows us to fetch device data
+ * for all sorts of devices.
+ * 
+ * If there is no API already set up, which I don't believe there is,
+ * we'll have to scrape the web, likely wikipedia
+ * because I already found beautiful, clean lists of the information we need.
+ * I'll turn this scraping project into an issue. If you find an API that exists
+ * for certain devices, this would be better than scraping, but I doubt they exist.
+ * 
+ * If we find one API for stoves and one for televisions, but we can't find any
+ * for any other devices, we'll just use the APIs for the devices that exist, and
+ * scrape wikipedia or other sites for the rest of the data we need.
+ * 
+ * What data do we need?
+ * 
+ *************************** SMALL APPLIANCES  ************************
+ * Vacuum Cleaners
+ * Blenders
+ * Sewing Machines
+ * Heaters
+ * Bicycles
+  ***************************** SPECIALTY  ****************************
+ * Furniture
+ * Jewelery
+ * Watches
+ * Musical Instrument
+  *************************** CONSTRUCTION  ***************************
+ * Power Tools
+  ************************* LARGE APPLIANCES  *************************
+ * Air Conditioners
+ * Garbage Disposals
+ * Refrigerators and Freezers
+ * Electric Ovens and Stoves
+ * Washers/Dryers
+  **************************** TECHNOLOGY  ****************************
+ * Televisions
+ * Smartphones and Tablets
+ * Computers and Labtops
+ * 
+ * This is the data we need starting from the small appliances and moving * * our way to the more expensive "things". Let's begin just just trying to 
+ * find any API that can provide us vacuum cleaner data. If we cannot find
+ * this, we'll scrape the data from wikipedia: https://en.wikipedia.org/wiki/List_of_vacuum_cleaners
+ */
 //data
 const devices = [
     {
