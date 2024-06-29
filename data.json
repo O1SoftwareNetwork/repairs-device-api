@@ -1,0 +1,149 @@
+[
+  {
+    "modelId": "AC001",
+    "modelName": "CoolBreeze X3000",
+    "manufacturer": "CoolTech",
+    "deviceName": "air conditioner",
+    "releasedDate": "2022-03-15"
+  },
+  {
+    "modelId": "AF001",
+    "modelName": "AirFry Master Pro",
+    "manufacturer": "KitchenWiz",
+    "deviceName": "air fryer",
+    "releasedDate": "2023-06-28"
+  },
+  {
+    "modelId": "AI001",
+    "modelName": "IonizeTech 5000",
+    "manufacturer": "PureAir Inc.",
+    "deviceName": "air ioniser",
+    "releasedDate": "2023-01-10"
+  },
+  {
+    "modelId": "AL001",
+    "modelName": "AromaGlow Deluxe",
+    "manufacturer": "ScentedHome",
+    "deviceName": "aroma lamp",
+    "releasedDate": "2022-09-20"
+  },
+  {
+    "modelId": "AF002",
+    "modelName": "AtticBreeze ECO",
+    "manufacturer": "EnergySaver",
+    "deviceName": "attic fan",
+    "releasedDate": "2023-04-05"
+  },
+  {
+    "modelId": "BG001",
+    "modelName": "GrillMaster Solo",
+    "manufacturer": "BachelorChef",
+    "deviceName": "bachelor griller",
+    "releasedDate": "2022-12-12"
+  },
+  {
+    "modelId": "BB001",
+    "modelName": "BackBurner Elite",
+    "manufacturer": "BackyardPro",
+    "deviceName": "back boiler",
+    "releasedDate": "2023-02-18"
+  },
+  {
+    "modelId": "BBQ001",
+    "modelName": "FlameKing BBQ Pro",
+    "manufacturer": "OutdoorLiving",
+    "deviceName": "barbecue",
+    "releasedDate": "2022-07-30"
+  },
+  {
+    "modelId": "BO001",
+    "modelName": "HiveHeat Oven",
+    "manufacturer": "HoneyBake",
+    "deviceName": "beehive oven",
+    "releasedDate": "2023-05-14"
+  },
+  {
+    "modelId": "BO002",
+    "modelName": "BrewMaster Opener",
+    "manufacturer": "BeverageTech",
+    "deviceName": "beverage opener",
+    "releasedDate": "2022-10-08"
+  },
+  {
+    "modelId": "BL001",
+    "modelName": "BoilTech Plus",
+    "manufacturer": "HotWater Ltd.",
+    "deviceName": "boiler",
+    "releasedDate": "2023-03-22"
+  },
+  {
+    "modelId": "BM001",
+    "modelName": "BreadMist Pro",
+    "manufacturer": "BreadEase",
+    "deviceName": "bread machine",
+    "releasedDate": "2022-11-25"
+  },
+  {
+    "modelId": "BT001",
+    "modelName": "FlameFire Torch",
+    "manufacturer": "FireTech",
+    "deviceName": "butane torch",
+    "releasedDate": "2023-07-12"
+  },
+  {
+    "modelId": "CO001",
+    "modelName": "CanOpener Ultra",
+    "manufacturer": "EasyOpen",
+    "deviceName": "can opener",
+    "releasedDate": "2022-08-16"
+  },
+  {
+    "modelId": "CF001",
+    "modelName": "BreezeMax Plus",
+    "manufacturer": "AirFlow",
+    "deviceName": "ceiling fan",
+    "releasedDate": "2023-01-30"
+  },
+  {
+    "modelId": "CV001",
+    "modelName": "CentralSuck 2000",
+    "manufacturer": "HomeSweeper",
+    "deviceName": "central vacuum cleaner",
+    "releasedDate": "2022-12-05"
+  },
+  {
+    "modelId": "CD001",
+    "modelName": "DrySmart Deluxe",
+    "manufacturer": "LaundryPro",
+    "deviceName": "clothes dryer",
+    "releasedDate": "2023-04-20"
+  },
+  {
+    "modelId": "CI001",
+    "modelName": "IronMaster 5000",
+    "manufacturer": "PressEase",
+    "deviceName": "clothes iron",
+    "releasedDate": "2022-10-30"
+  },
+  {
+    "modelId": "CP001",
+    "modelName": "PerkItUp Pro",
+    "manufacturer": "CoffeeBrew",
+    "deviceName": "coffee percolator",
+    "releasedDate": "2023-02-15"
+  },
+  {
+    "modelId": "CM001",
+    "modelName": "BrewBliss 3000",
+    "manufacturer": "CaffeineTech",
+    "deviceName": "coffeemaker",
+    "releasedDate": "2022-09-10"
+  },
+  {
+    "modelId": "CWD001",
+    "modelName": "WashDryer Combo X",
+    "manufacturer": "LaundryTech",
+    "deviceName": "combo washer dryer",
+    "releasedDate": "2023-06-05"
+  }
+]
